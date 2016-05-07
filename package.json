@@ -5,7 +5,7 @@
 
     "version": "1.0.1",
 
-    "description": "Creates context menu items for quick searching of selected text via configurable URL's",
+    "description": "Creates context menu items for quick searching of selected text via configurable URL's.",
 
     "main": "index.js",
 
