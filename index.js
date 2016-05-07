@@ -11,6 +11,14 @@ var sdk = {
 function loadSettings() {
 	return sdk.simpleStorage.storage.settings || {
 		items: [{
+			label: "Google Maps",
+			url: "http://maps.google.com/?q=%s",
+			icon: "http://maps.google.com/favicon.ico"
+		}, {
+			label: "Google Translate",
+			url: "https://translate.google.com/#en/ru/%s",
+			icon: "http://translate.google.com/favicon.ico"
+		}, {
 			label: "Lingvo",
 			url: "www.lingvo.ua/ru/Translate/en-ru/%s",
 			icon: "http://www.lingvo.ua/favicon.ico"
