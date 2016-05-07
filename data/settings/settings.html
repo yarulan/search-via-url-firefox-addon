@@ -6,13 +6,27 @@
 		<script type="text/javascript" src='settings.js'></script>
 	</head>
 	<body>
-		<h1>Settings</h1>
+		<h1>Search via URL settings</h1>
 		<div ng-controller='Controller'>
 			<table class="settings">
 				<tr class="row">
 					<td class="col1">Title</td>
 					<td class="col2">URL</td>
 					<td class="col3">Icon</td>
+					<td class="col4"></td>
+				</tr>
+				<tr class="row">
+					<td class="col1">
+						The title of the context menu item. If empty the url is used.
+					</td>
+					<td class="col2">
+						The URL to open when clicking on this menu item.
+						%s is substituted with selected text.
+						Ignored if blank.
+					</td>
+					<td class="col3">
+						URL to the icon for the context menu item. Optional.
+					</td>
 					<td class="col4"></td>
 				</tr>
 				<tr class="row" ng-repeat='item in settings.items'>
