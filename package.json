@@ -24,8 +24,8 @@
 
     "preferences": [{
         "type": "control",
-        "label": "Open settings panel",
+        "label": "Open settings panel...",
         "name": "openSettingsPanel",
-        "title": "Open settings..."
+        "title": "Open settings panel"
     }]
 }
