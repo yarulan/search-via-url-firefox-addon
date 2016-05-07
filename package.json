@@ -3,7 +3,7 @@
 
     "name": "search-via-url",
 
-    "version": "1.0.0",
+    "version": "1.0.1",
 
     "description": "Creates context menu items for quick searching of selected text via configurable URL's",
 
