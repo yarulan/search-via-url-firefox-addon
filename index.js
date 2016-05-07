@@ -28,17 +28,17 @@ var getSettingsPanel = (function() {
 		if (!settingsPanel) {
 			settingsPanel = sdk.panel.Panel({
 				width: 800,
-				// height: 600,
+				height: 600,
 				contentURL: './settings/settings.html',
-				contentScriptFile: './settings/settings-content-script.js',
 				onHide: function() {
 					this.port.emit('getSettingsRequest');
 					settingsPanel = null;
 					this.destroy;
+				},
+				onShow: function() {
+					this.port.emit('settingsLoaded', loadSettings());
 				}
 			});
-
-			settingsPanel.port.emit('settingsLoaded', JSON.stringify(loadSettings()));
 
 			settingsPanel.port.on('getSettingsResponse', function(settings) {
 				settings = JSON.parse(settings);

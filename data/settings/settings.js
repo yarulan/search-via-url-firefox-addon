@@ -1,8 +1,7 @@
-(function(window) {
-	console.log("XXXXXXXXXXXXX");
+(function(addon) {
 	var app = angular.module('app', []);
 
-	function Controller($scope, window) {
+	function Controller($scope, addon) {
 		$scope.add = function() {
 			$scope.settings.items.push({});
 		}
@@ -11,21 +10,18 @@
 			$scope.settings.items.splice($scope.settings.items.indexOf(item), 1);
 		}
 
-		$scope.$watch(function() {
-			window.settings = angular.toJson($scope.settings);
+		addon.port.on('settingsLoaded', function(settings) {
+			$scope.$apply(function() {
+				$scope.settings = settings;
+			});
 		});
 
-		window.addEventListener('message', function(message) {
-			message = message.data;
-			if (message.type = 'settingsLoaded') {
-				var settings = JSON.parse(message.payload);
-				$scope.$apply(function() {
-					$scope.settings = settings;
-				});
-			}
+		addon.port.on('getSettingsRequest', function() {
+			addon.port.emit('getSettingsResponse', angular.toJson($scope.settings));
 		});
 	}
 
-	app.controller('Controller', ['$scope', 'window', Controller]);
-	app.constant('window', window);
-})(window);
+	app.constant('addon', addon);
+
+	app.controller('Controller', ['$scope', 'addon', Controller]);
+})(addon);
