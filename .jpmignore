@@ -1,0 +1,7 @@
+.gitignore
+.jpmignore
+.git/
+*.xpi
+*.zip
+*.pdn
+screenshots/
