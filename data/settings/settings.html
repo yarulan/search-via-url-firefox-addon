@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html ng-app='app'>
+	<head>
+		<link rel="stylesheet" type="text/css" href="settings.css">
+		<script type="text/javascript" src='../angular.min.js'></script>
+		<script type="text/javascript" src='settings.js'></script>
+	</head>
+	<body>
+		<h1>Settings</h1>
+		<div ng-controller='Controller'>
+			<table class="settings">
+				<tr class="row">
+					<td class="col1">Title</td>
+					<td class="col2">URL</td>
+					<td class="col3">Icon</td>
+					<td class="col4"></td>
+				</tr>
+				<tr class="row" ng-repeat='item in settings.items'>
+					<td class="col1"><input ng-model='item.label'/></td>
+					<td class="col2"><input ng-model='item.url'/></td>
+					<td class="col3"><input ng-model='item.icon'/></td>
+					<td class="col4"><span ng-click='remove(item)' class='link'>Remove</span></td>
+				</tr>
+			</table>
+			<div style="text-align:center;">
+				<span ng-click='add()' class='link'>Add</span>
+			</div>
+		</div>
+	</body>
+</html>

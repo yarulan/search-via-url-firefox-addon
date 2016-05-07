@@ -1,0 +1,38 @@
+body {
+}
+
+.link {
+	text-decoration: underline;
+	cursor: pointer;
+	color: blue;
+}
+
+.settings {
+	width: 100%;
+}
+
+
+.settings td {
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+.settings input {
+	width: 100%;
+}
+
+.col1 {
+	width: 20%;
+}
+
+.col2 {
+
+}
+
+.col3 {
+	width: 20%;
+}
+
+.col4 {
+	width: 10%;
+}

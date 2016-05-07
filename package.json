@@ -1,0 +1,31 @@
+{
+    "title": "Search via URL",
+
+    "name": "search-via-url",
+
+    "version": "1.0.0",
+
+    "description": "Creates context menu items for quick searching of selected text via configurable URL's",
+
+    "main": "index.js",
+
+    "author": "Yaroslav Ulanovych",
+
+    "engines": {
+        "firefox": ">=38.0a1",
+        "fennec": ">=38.0a1"
+    },
+
+    "license": "MIT",
+
+    "keywords": [
+        "jetpack"
+    ],
+
+    "preferences": [{
+        "type": "control",
+        "label": "Open settings panel",
+        "name": "openSettingsPanel",
+        "title": "Open settings..."
+    }]
+}
