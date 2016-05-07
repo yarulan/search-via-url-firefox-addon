@@ -6,4 +6,5 @@ when is clicked, takes the URL, inserts selected text at specified position and 
 Examples are bundled with the addon.
 <a href="https://github.com/yarulan/search-via-url-firefox-addon">It's free and open source</a>.
 
-![](/screenshots/1.png?raw=true)
+![](/screenshots/3.png?raw=true)
+![](/screenshots/4.png?raw=true)
